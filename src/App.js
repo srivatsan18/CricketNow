@@ -7,7 +7,7 @@ export default function App() {
       <div>
         <home />
       </div>
-      <h2>Start editing to see some magic happen!</h2>
+      <h2>CricketNow</h2>
       <Home />
     </div>
   );
