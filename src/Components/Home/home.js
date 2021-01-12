@@ -66,7 +66,6 @@ class home extends React.Component {
               </Link>
             </button>
           </div>
-          switch
         </div>
       </div>
     );
