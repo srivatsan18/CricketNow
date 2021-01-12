@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.css";
-import Home from "./Components/home";
+import Home from "./Components/Home/home";
 import Homebg from "./Components/images/homebg.jpg";
 export default function App() {
   return (
@@ -9,7 +9,6 @@ export default function App() {
         <home />
       </div>
       <Home />
-      <img src={Homebg} />
     </div>
   );
 }

@@ -1,0 +1,26 @@
+.login {
+  /* background-image: url("../images/homebg.jpg"); */
+  /* height: 100%; */
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.col-form-label {
+  color: #ffff;
+}
+.btn-block {
+  border: none;
+  color: white;
+  padding: 10px;
+  width: 300px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 10px;
+}
+.btn-block:hover {
+  color: rgb(243, 108, 209);
+  border: 2px solid black;
+}
