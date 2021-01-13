@@ -7,6 +7,21 @@ import logo from "../images/noun_Cricket_2369453.svg";
 import Register from "./register";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 class home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { username: " ", password: " " };
+  }
+  handlechange = (event) => {
+    let id = event.target.name;
+    this.setState({ [id]: event.target.value });
+  };
+  submithandler = (event) => {
+    alert(
+      "A name was submitted: " + this.state.username + " " + this.state.password
+    );
+    event.preventDefault();
+  };
+
   render() {
     return (
       <div>
@@ -21,36 +36,45 @@ class home extends React.Component {
         >
           <div class="Jumbotron">
             <img src={logo} />
-            <div class="row g-3 align-items-center">
-              <label for="inputPassword6" class="col-form-label">
-                Username
-              </label>
+            <form onSubmit={this.submithandler}>
+              <div class="row g-3 align-items-center">
+                <label for="inputPassword6" class="col-form-label">
+                  Username
+                </label>
 
-              <input
-                type="text"
-                id="inputPassword6"
-                class="form-control"
-                aria-describedby="passwordHelpInline"
-              />
-            </div>
-            <div class="row g-3 align-items-center">
-              <label for="inputPassword6" class="col-form-label">
-                Password
-              </label>
+                <input
+                  type="text"
+                  id="inputPassword6"
+                  class="form-control"
+                  name="username"
+                  value={this.state.username}
+                  onChange={this.handlechange}
+                  aria-describedby="passwordHelpInline"
+                />
+              </div>
+              <div class="row g-3 align-items-center">
+                <label for="inputPassword6" class="col-form-label">
+                  Password
+                </label>
 
-              <input
-                type="password"
-                id="inputPassword6"
-                class="form-control"
-                aria-describedby="passwordHelpInline"
-              />
-            </div>
-            <br />
-            <button type="submit" class="btn btn-dark btn-block">
-              <Link to="/" className="linkto">
+                <input
+                  type="password"
+                  id="inputPassword6"
+                  class="form-control"
+                  name="password"
+                  onChange={this.handlechange}
+                  aria-describedby="passwordHelpInline"
+                />
+              </div>
+              <br />
+              <button
+                type="submit"
+                class="btn btn-dark btn-block"
+                value="Submit"
+              >
                 Submit
-              </Link>
-            </button>
+              </button>
+            </form>
             <br />
 
             <button type="submit" class="btn btn-dark btn-block">
