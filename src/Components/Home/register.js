@@ -1,6 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
+import Homebg from "../images/homebg.jpg";
+import logo from "../images/noun_Cricket_2369453.svg";
 import Select, { components } from "react-select";
 import { ReactComponent as af } from "../images/af.svg";
 import { ReactComponent as nz } from "../images/nz.svg";
@@ -11,6 +13,7 @@ import { ReactComponent as pk } from "../images/pk.svg";
 import { ReactComponent as bd } from "../images/bd.svg";
 
 const Options = [
+  {value :"Choose your Team", label:"Choose your Team"},
   { value: "Afghanistan", label: "Afghanistan", icon: <af /> },
   { value: "New Zealand", label: "New Zealand", icon: <nz /> },
   { value: "India", label: "India", icon: <ind /> },
@@ -50,6 +53,17 @@ class register extends React.Component {
   render() {
     return (
       <div className="reg">
+          <div
+          className="login"
+          style={{
+            backgroundImage: `url(${Homebg})`,
+
+            height: "800px",
+            opacity: 0.8
+          }}
+        >
+        <div class="Jumbotron">
+            <img src={logo} />
         <form>
           <div class="form-group">
             <label for="exampleFormControlInput1">User Name</label>
@@ -101,6 +115,8 @@ class register extends React.Component {
             Sign In
           </button>
         </form>
+        </div>
+        </div>
       </div>
     );
   }

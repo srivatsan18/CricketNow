@@ -8,6 +8,7 @@ export default function App() {
   return (
     <Router>
       <div className="App">
+        CrickNow
         <div>
           <Route exact path="/" component={Home} />
           <Route exact path="/Register" component={Register} />
